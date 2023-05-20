@@ -1,0 +1,10 @@
+.header-container {
+    
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+@media (min-width: 1024px) {
+    
+}

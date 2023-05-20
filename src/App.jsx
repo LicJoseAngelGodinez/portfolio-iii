@@ -1,16 +1,20 @@
-import { Routes, Route, HashRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 // import { GlobalProvider } from './Context';
 
 import Home from './pages/home/home';
+import Navbar from './component/navbar/navbar';
+import About from './pages/about/about';
 
 function App() {
   return (
-    <HashRouter>
+    <>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
       </Routes>
-    </HashRouter>
+    </>
   );
 }
 
