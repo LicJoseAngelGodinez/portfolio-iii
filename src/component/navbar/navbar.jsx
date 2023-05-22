@@ -27,6 +27,9 @@ const Navbar = () => {
             <div className='nav-menu'>
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
+                <Link to="/experience">Experience</Link>
+                <Link to="/work">Work</Link>
+                <Link to="/contact">Contact</Link>
             </div>
             <div className="burger-menu" onClick={updateMenu}>
                 <div className={buger_class}></div>
@@ -39,6 +42,9 @@ const Navbar = () => {
 
             <Link onClick={updateMenu} to="/">Home</Link>
             <Link onClick={updateMenu} to="/about">About</Link>
+            <Link onClick={updateMenu} to="/experience">Experience</Link>
+            <Link onClick={updateMenu} to="/work">Work</Link>
+            <Link onClick={updateMenu} to="/contact">Contact</Link>
 
         </div>
 

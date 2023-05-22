@@ -1,11 +1,8 @@
-* {
+nav {
     margin: 0;
     box-sizing: border-box;
-}
-
-nav {
     width: 100%;
-    height: 5em;
+    height: 3em;
     background-color: var(--color-violet);
     display: flex;
     align-items: center;
@@ -14,9 +11,10 @@ nav {
 }
 
 .brand {
-    font-size: 1.5em;
+    font-size: 1em;
     padding-left: .5em;
     color: var(--color-white-violet);
+
     font-family: 'Rock Salt', cursive;
 }
 
@@ -37,7 +35,7 @@ nav {
 
 .nav-menu a:hover {
     border-radius: 8px;
-    background-color: #a32bff;
+    background-color: var(--color-light-violet);
 }
 
 .burger-menu {
@@ -51,17 +49,17 @@ nav {
 }
 
 .burger-bar {
-    width: 2.5em;
-    height: 0.350em;
-    background-color: white;
+    width: 1.5em;
+    height: 0.150em;
+    background-color: var(--color-pure-white);
     border-radius: 0.5em;
 }
 
 .menu {
-    height: 100vh;
+    height: calc(100vh - 3em);
     background-color: var(--color-grey);
     position: absolute;
-    top: 5em;
+    top: 3em;
     right: 0;
     transition: ease 0.2s;
 }
@@ -79,17 +77,28 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1em;
     width: 100%;
 }
 
 .menu.visible a {
+    padding: .6em 1em;
     color: var(--color-white-violet);
     text-decoration: none;
     font-size: 1.5em;
 }
 
+.menu.visible a:hover {
+    background-color: var(--color-light-grey);
+    border-radius: 8px;
+}
+
+.menu.visible a::first-letter {
+    font-family: 'Rock Salt';
+}
+
 .burger-bar.clicked:nth-child(1) {
-    transform: rotate(45deg) translate(0.75em, .85em);
+    transform: rotate(45deg) translate(0.75em, .03em);
     transition: ease-out 0.5s;
 }
 
@@ -99,7 +108,7 @@ nav {
 }
 
 .burger-bar.clicked:nth-child(3) {
-    transform: rotate(135deg) translate(-0.5em, .65em);
+    transform: rotate(135deg) translate(-0.5em, -.25em);
     transition: ease-out 0.5s;
 }
 
@@ -114,7 +123,7 @@ nav {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768.1px) {
     .burger-menu {
         display: none;
     }
